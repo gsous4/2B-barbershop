@@ -18,8 +18,8 @@ export default function HeroSection() {
           backgroundBlendMode: 'multiply',
         }}
       />
-      <div className="absolute inset-0 bg-black/90" />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-transparent to-black/100" />
+      <div className="absolute inset-0 bg-black/70" />
+<div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/5 to-black/80" />
 
       <div className="relative z-10 text-center px-6 flex flex-col items-center gap-8 animate-fade-in">
         {/* Real logo */}
