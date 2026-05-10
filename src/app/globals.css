@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Barlow:wght@300;400;500;600&family=Bebas+Neue&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-playfair: 'Playfair Display', serif;
+  --font-barlow: 'Barlow', sans-serif;
+  --font-bebas: 'Bebas Neue', sans-serif;
+  --gold: #C9A84C;
+  --gold-light: #E8C96A;
+  --dark: #0A0A0A;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0A0A0A;
+  color: #fff;
+  font-family: var(--font-barlow);
+  overflow-x: hidden;
+}
+
+/* Scissor decoration */
+.scissor-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.scissor-divider::before,
+.scissor-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.4;
+}
+
+/* Section label style */
+.section-label {
+  font-family: var(--font-barlow);
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  color: var(--gold);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Gold button */
+.btn-gold {
+  background: var(--gold);
+  color: #0A0A0A;
+  font-family: var(--font-bebas);
+  letter-spacing: 0.15em;
+  font-size: 1rem;
+  padding: 0.875rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+  background: var(--gold-light);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  border: 1px solid rgba(201, 168, 76, 0.5);
+  color: #fff;
+  font-family: var(--font-bebas);
+  letter-spacing: 0.15em;
+  font-size: 1rem;
+  padding: 0.875rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* Service row hover */
+.service-row {
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  transition: background 0.2s ease;
+}
+
+.service-row:hover {
+  background: rgba(201, 168, 76, 0.04);
+}
+
+/* Animate on scroll */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
